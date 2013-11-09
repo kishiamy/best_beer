@@ -1,0 +1,6 @@
+%h1 Top ten
+-@beers.each do |beer|
+  = beer.name 
+  = beer.brand
+  = link_to beer.vote, root_path(beer.obdb_id), method: :post
+-end
