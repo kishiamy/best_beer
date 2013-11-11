@@ -4,4 +4,7 @@
     %li
       = beer.name 
       = beer.brand
-      = link_to "Votes: #{beer.votes}",  vote_path(beer.obdb_id), method: :post
+      -if beer.votes.nil?
+        = link_to "Vote!", vote_path(beer.obdb_id), method: :post
+      -else 
+        = link_to "Votes: #{beer.votes}",  vote_path(beer.obdb_id), method: :post
