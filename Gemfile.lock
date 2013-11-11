@@ -40,6 +40,8 @@ GEM
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (2.0.2)
+    factory_girl (4.3.0)
+      activesupport (>= 3.0.0)
     haml (4.0.4)
       tilt
     haml-rails (0.4)
@@ -129,6 +131,7 @@ PLATFORMS
 DEPENDENCIES
   bartender
   coffee-rails (~> 4.0.0)
+  factory_girl
   haml-rails
   jbuilder (~> 1.2)
   jquery-rails
