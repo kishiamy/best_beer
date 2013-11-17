@@ -3,6 +3,6 @@ class Beer < ActiveRecord::Base
 
   def add_vote
     votes.present? ? self.votes +=1 : self.votes = 1
-    self.save
+    self.save #update_attribute
   end
 end
