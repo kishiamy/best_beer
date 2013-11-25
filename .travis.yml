@@ -1,6 +1,8 @@
 language: ruby
 rvm:
 - 2.0.0
+gemfile:
+- Gemfile
 bundler_args: --without development production
 before_install:
 - gem install bundler
