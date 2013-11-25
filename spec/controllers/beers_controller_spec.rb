@@ -7,7 +7,7 @@ describe BeersController do
 
     it "increase vote count" do
       expect(Beer).to receive(:find).with("1").and_return(beer)
-      post :vote, obdb_id: 1
+      post :vote, id: 1
       expect(beer.votes).to eql(1)
       expect(response).to redirect_to(root_path)
     end
