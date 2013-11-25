@@ -36,6 +36,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails', '4.2.1'
   gem 'debugger'
+  gem 'capybara'
 end
 
 # Use ActiveModel has_secure_password
