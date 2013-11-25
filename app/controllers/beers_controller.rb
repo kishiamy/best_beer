@@ -5,7 +5,7 @@ class BeersController < ApplicationController
   end
   
   def vote
-    @beer = Beer.find(params[:obdb_id])
+    @beer = Beer.find(params[:id])
     @beer.add_vote 
     redirect_to root_path
   end
