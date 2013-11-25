@@ -2,8 +2,8 @@ require 'factory_girl'
 
 FactoryGirl.define do
   factory :beer do
-    name 'Bita beer'
+    name 'Bita-Beer'
     sequence(:obdb_id) 
-    brand "bita brand"
+    brand "No brand"
   end
 end
