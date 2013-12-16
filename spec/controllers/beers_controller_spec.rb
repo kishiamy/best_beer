@@ -12,4 +12,12 @@ describe BeersController do
       expect(response).to redirect_to(root_path)
     end
   end
+
+  describe "GET #index" do
+    it "responds successfully" do
+      get :index
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+  end
 end
