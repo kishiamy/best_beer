@@ -1,10 +1,6 @@
 language: ruby
 rvm:
 - 2.0.0
-gemfile:
-- Gemfile
-before_install:
-- gem install bundler
 before_script:
 - cp config/database.yml.travis config/database.yml
 - bundle exec rake db:create db:migrate RAILS_ENV=test
