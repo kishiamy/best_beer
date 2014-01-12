@@ -5,6 +5,7 @@ gem 'rails', '4.0.1'
 
 # bartender gem
 gem 'bartender' 
+gem 'haml-rails'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -33,6 +34,10 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'factory_girl_rails', '4.2.1'
+  gem 'debugger'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 # Use ActiveModel has_secure_password

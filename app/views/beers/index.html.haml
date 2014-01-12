@@ -1,0 +1,10 @@
+%h1 Top ten
+%ol
+  -@beers.each do |beer|
+    %li
+      = beer.name 
+      = beer.brand
+      -if beer.votes.nil?
+        = link_to "Vote!", vote_path(beer), method: :post
+      -else 
+        = link_to "Votes: #{beer.votes}",  vote_path(beer), method: :post
