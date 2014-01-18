@@ -5,7 +5,6 @@ gem 'rails', '4.0.1'
 
 gem 'brewery_db' 
 gem 'haml-rails'
-gem 'webmock'
 
 gem 'pg'
 # Use sqlite3 as the database for Active Record
@@ -34,11 +33,16 @@ group :doc do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails', '4.2.1'
   gem 'debugger'
-  gem 'capybara'
   gem 'launchy'
+end
+
+group :test do
+  gem 'factory_girl_rails', '4.2.1'
+  gem 'rspec-rails'
+  gem 'webmock'
+  gem 'vcr'
+  gem 'capybara'
 end
 
 # Use ActiveModel has_secure_password
