@@ -3,12 +3,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
-# bartender gem
-gem 'bartender' 
+gem 'brewery_db' 
 gem 'haml-rails'
 
+gem 'pg'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -33,11 +33,16 @@ group :doc do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails', '4.2.1'
   gem 'debugger'
-  gem 'capybara'
   gem 'launchy'
+end
+
+group :test do
+  gem 'factory_girl_rails', '4.2.1'
+  gem 'rspec-rails'
+  gem 'webmock'
+  gem 'vcr'
+  gem 'capybara'
 end
 
 # Use ActiveModel has_secure_password
