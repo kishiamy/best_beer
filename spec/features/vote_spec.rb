@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Voting" do
   before do
-    beer = FactoryGirl.create(:beer)
+    FactoryGirl.create(:beer)
     visit root_path
   end
 
