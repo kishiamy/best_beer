@@ -7,9 +7,10 @@ class BeersController < ApplicationController
         config.api_key = (ENV['BREWERY_KEY'])
     end
 
-    @beers = brewery_db.search.beers(q: params[:name])
+    if @beers = brewery_db.search.beers(q: params[:name])
     #render json: @beers
-    render :search
+      render :search
+    end
   end
 
   def index
