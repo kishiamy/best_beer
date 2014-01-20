@@ -1,0 +1,8 @@
+%h1 Search Beer
+%ol
+  -@beers.each do |beer|
+    %li
+      = beer.name 
+      = beer.brand
+      -if beer.votes.nil?
+        = link_to "Vote!", vote_path(beer)
