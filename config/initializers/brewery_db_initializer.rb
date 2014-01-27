@@ -1,3 +1,3 @@
-brewery_db = BreweryDB::Client.new do |config|
-  config.api_key = (ENV['BREWERY_KEY'])
-end
+APP_CONFIG = YAML.load_file("config/brewery_db.yml")
+
+BestBeer::Application.config.api_key = APP_CONFIG[Rails.env]['api_key']

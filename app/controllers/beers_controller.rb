@@ -1,14 +1,9 @@
 class BeersController < ApplicationController
   skip_before_filter :verify_authenticity_token, only: [:search]
-
+  
   def search
-    #TODO: initializers brewery_key
-    brewery_db = BreweryDB::Client.new do |config|
-        config.api_key = (ENV['BREWERY_KEY'])
-    end
-
     if @beers = brewery_db.search.beers(q: params[:name])
-    #render json: @beers
+      #render json: @beers
       render :search
     end
   end
