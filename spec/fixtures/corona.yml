@@ -105,4 +105,72 @@ http_interactions:
       string: '{"errorMessage":"API key is not set in the query string.","status":"failure"}'
     http_version: 
   recorded_at: Sat, 18 Jan 2014 02:56:28 GMT
+- request:
+    method: get
+    uri: http://api.brewerydb.com/v2/search?key=0e1ffee8aaf1b9a1b52672e21495b603&q=Corona&type=beer
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - BreweryDB Ruby Gem 0.2.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 28 Jan 2014 21:47:16 GMT
+      Server:
+      - Apache/2.2.26 (Amazon)
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - PHP/5.3.28
+      X-Ratelimit-Limit:
+      - '400'
+      X-Ratelimit-Remaining:
+      - '400'
+      Content-Length:
+      - '1222'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"currentPage":1,"numberOfPages":1,"totalResults":3,"data":[{"id":"u7U2Ga","name":"Corona
+        Light","glasswareId":5,"availableId":1,"styleId":94,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/u7U2Ga\/upload_eQUVvN-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/u7U2Ga\/upload_eQUVvN-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/u7U2Ga\/upload_eQUVvN-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:01","updateDate":"2013-02-01 11:37:48","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        02:41:33"},"available":{"id":1,"name":"Year Round","description":"Available
+        year round as a staple beer."},"style":{"id":94,"categoryId":8,"category":{"id":8,"name":"North
+        American Lager","createDate":"2012-03-21 20:06:46"},"name":"American-Style
+        Light (Low Calorie) Lager","description":"These beers are extremely light
+        colored, light in body, and high in carbonation. Calorie level should not
+        exceed 125 per 12 ounce serving. Corn, rice, or other grain or sugar adjuncts
+        are often used. Flavor is mild and hop bitterness and aroma is negligible
+        to very low. Light fruity esters are acceptable. Chill haze and diacetyl should
+        be absent.","ibuMin":"5","ibuMax":"10","abvMin":"3.5","abvMax":"4.4","srmMin":"2","srmMax":"4","ogMin":"1.024","fgMin":"1.002","fgMax":"1.008","createDate":"2012-03-21
+        20:06:46"},"type":"beer"},{"id":"wIjz4t","name":"Corona Familiar","isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/wIjz4t\/upload_fBetgk-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/wIjz4t\/upload_fBetgk-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/wIjz4t\/upload_fBetgk-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:01","updateDate":"2012-08-29 19:09:09","type":"beer"},{"id":"ujPz4L","name":"Corona
+        Extra","description":"Corona Extra is the number-one selling beer in Mexico
+        and the leading export brand from Mexico. This pilsener type beer was first
+        brewed in 1925 by Cervecer\u00eda Modelo, located in Mexico City.","abv":"4.6","glasswareId":5,"availableId":1,"styleId":97,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/ujPz4L\/upload_vU73kW-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/ujPz4L\/upload_vU73kW-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/ujPz4L\/upload_vU73kW-large.png"},"status":"update_pending","statusDisplay":"Update
+        Pending","createDate":"2012-01-03 02:43:01","updateDate":"2013-12-15 21:17:28","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        02:41:33"},"available":{"id":1,"name":"Year Round","description":"Available
+        year round as a staple beer."},"style":{"id":97,"categoryId":8,"category":{"id":8,"name":"North
+        American Lager","createDate":"2012-03-21 20:06:46"},"name":"American-Style
+        Premium Lager","description":"This style has low malt (and adjunct) sweetness,
+        is medium bodied, and should contain no or a low percentage (less than 25%)
+        of adjuncts. Color may be light straw to golden. Alcohol content and bitterness
+        may also be greater. Hop aroma and flavor is low or negligible. Light fruity
+        esters are acceptable. Chill haze and diacetyl should be absent. Note: Some
+        beers marketed as \"premium\" (based on price) may not fit this definition.","ibuMin":"6","ibuMax":"15","abvMin":"4.3","abvMax":"5","srmMin":"2","srmMax":"6","ogMin":"1.044","fgMin":"1.01","fgMax":"1.014","createDate":"2012-03-21
+        20:06:46"},"type":"beer"}],"status":"success"}'
+    http_version: 
+  recorded_at: Tue, 28 Jan 2014 21:47:16 GMT
 recorded_with: VCR 2.8.0

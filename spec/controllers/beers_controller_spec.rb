@@ -16,8 +16,8 @@ describe BeersController do
     it "search beer by name" do
       VCR.use_cassette('corona') do
         get :search, name: 'Corona'#, format: 'html'
-        expect(response.body.size).to eq(3505)
-        expect(response.status).to eq(200)
+        expect(response).to render_template("search")
+        expect(response).to be_success
       end
     end
   end
