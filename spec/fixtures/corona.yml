@@ -107,7 +107,7 @@ http_interactions:
   recorded_at: Sat, 18 Jan 2014 02:56:28 GMT
 - request:
     method: get
-    uri: http://api.brewerydb.com/v2/search?key=0e1ffee8aaf1b9a1b52672e21495b603&q=Corona&type=beer
+    uri: http://api.brewerydb.com/v2/search?key&q=Corona&type=beer
     body:
       encoding: US-ASCII
       string: ''
