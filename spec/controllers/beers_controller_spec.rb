@@ -12,13 +12,25 @@ describe BeersController do
     end
   end
 
-  describe "GET search" do
+  describe "GET index" do
     it "search beer by name" do
       VCR.use_cassette('corona') do
-        get :search, name: 'Corona'#, format: 'html'
+        get :index, name: 'Corona'
         expect(response).to render_template("search")
         expect(response).to be_success
       end
     end
   end
+
+=begin
+  describe "POST create" do
+    let(:beer) { FactoryGirl.create(:beer) }
+
+    it "creates a beer" do
+      post :create, name: beer.name
+#      expect(beer.count).to eql(1)
+      expect(response).to be_success
+    end
+  end
+=end
 end

@@ -1,7 +1,11 @@
 %h1 Beers found
 %ol
   -if @beers.count.zero?
-    = "Noooope"
+    %p We couldn't find any beer called '#{params[:name]}'
+    %p
+      You could create it here 
+      = link_to "Create"
+
   -@beers.each do |beer|
     %li
       = beer.name 
