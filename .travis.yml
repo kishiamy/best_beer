@@ -3,6 +3,7 @@ rvm:
 - 2.0.0
 before_script:
 - cp config/database.yml.travis config/database.yml
+- cp config/brewery_db.yml.example config/brewery_db.yml 
 - bundle exec rake db:create db:migrate RAILS_ENV=test
 script:
 - bundle exec rspec spec
